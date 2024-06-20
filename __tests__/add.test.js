@@ -9,3 +9,7 @@ test('Return 1 when input is 1', () => {
 test('Return 6 when input is 1,5', () => {
     expect(add(1,5)).toBe(6);
 });
+
+test('Return output for multiple inputs', () => {
+    expect(add(1,5,5,10)).toBe(21);
+});
