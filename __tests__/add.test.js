@@ -32,6 +32,6 @@ test('Delimiters as inputs', () => {
 });
 
 test('Exception on negative numbers', () => {
-    expect(add("1,-1")).toBe("negative numbers not allowed -1");
-    expect(add("-4,1,-1")).toBe("negative numbers not allowed -4,-1");
+    expect(() => add("1,-1")).toThrow("negative numbers not allowed -1");
+    expect(() => add("-4,1,-1")).toThrow("negative numbers not allowed -4,-1");
 })
