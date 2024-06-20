@@ -20,18 +20,18 @@ test('Return output for multiple inputs', () => {
 });
 
 test('Handle new-line inputs', () => {
-    expect(add("1\n2,3").toBe(6))
-    expect(add("1\n2,\n3,4").toBe(10));
+    expect(add("1\n2,3")).toBe(6)
+    expect(add("1\n2,\n3,4")).toBe(10);
 });
 
 test('Delimiters as inputs', () => {
-    expect(add("//;\n1;2").toBe(3))
-    expect(add("//,1\n1,2").toBe(4))
-    expect(add("1|\n1|2").toBe(4))
+    expect(add("//;\n1;2")).toBe(3)
+    expect(add("//,1\n1,2")).toBe(4)
+    expect(add("1|\n1|2")).toBe(4)
 
 });
 
 test('Exception on negative numbers', () => {
-    expect(add("1,-1").toBe("negative numbers not allowed -1"));
-    expect(add("-4,1,-1").toBe("negative numbers not allowed -4,-1"));
+    expect(add("1,-1")).toBe("negative numbers not allowed -1");
+    expect(add("-4,1,-1")).toBe("negative numbers not allowed -4,-1");
 })
