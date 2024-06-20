@@ -17,3 +17,7 @@ test('Return output for multiple inputs', () => {
 test('handle new-line inputs', () => {
     expect(add("1\n2,3").toBe(6))
 })
+
+test('delimiters as inputs', () => {
+    expect(add("//;\n1;2").toBe(3))
+})
